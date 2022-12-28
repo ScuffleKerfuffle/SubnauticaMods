@@ -49,4 +49,6 @@
     <Exec Command="call .\Build\CopyOutput.bat" />
   </Target>
 
+  <Import Project="..\SubnauticaUtils\SubnauticaUtils.projitems" Label="Shared" />
+
 </Project>

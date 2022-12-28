@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomizedStorage", "CustomizedStorage\CustomizedStorage.csproj", "{7320C042-B75D-467D-AE23-C5DEB8253F93}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SubnauticaUtils", "SubnauticaUtils\SubnauticaUtils.shproj", "{82A5EE8C-9C48-4F16-81CA-7E796073B12F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,5 +23,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {195D46F6-369E-4035-8ABD-D6162B826724}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SubnauticaUtils\SubnauticaUtils.projitems*{7320c042-b75d-467d-ae23-c5deb8253f93}*SharedItemsImports = 5
+		SubnauticaUtils\SubnauticaUtils.projitems*{82a5ee8c-9c48-4f16-81ca-7e796073b12f}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
