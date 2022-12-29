@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomizedStorage", "Custom
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SubnauticaUtils", "SubnauticaUtils\SubnauticaUtils.shproj", "{82A5EE8C-9C48-4F16-81CA-7E796073B12F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicBattery", "MagicBattery\MagicBattery.csproj", "{DA96421F-7763-4ED6-92C2-0EF07465D68B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{7320C042-B75D-467D-AE23-C5DEB8253F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7320C042-B75D-467D-AE23-C5DEB8253F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7320C042-B75D-467D-AE23-C5DEB8253F93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA96421F-7763-4ED6-92C2-0EF07465D68B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA96421F-7763-4ED6-92C2-0EF07465D68B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA96421F-7763-4ED6-92C2-0EF07465D68B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA96421F-7763-4ED6-92C2-0EF07465D68B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -27,5 +33,6 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		SubnauticaUtils\SubnauticaUtils.projitems*{7320c042-b75d-467d-ae23-c5deb8253f93}*SharedItemsImports = 5
 		SubnauticaUtils\SubnauticaUtils.projitems*{82a5ee8c-9c48-4f16-81ca-7e796073b12f}*SharedItemsImports = 13
+		SubnauticaUtils\SubnauticaUtils.projitems*{da96421f-7763-4ed6-92c2-0ef07465d68b}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
