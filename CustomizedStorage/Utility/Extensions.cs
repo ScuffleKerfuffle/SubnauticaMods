@@ -1,6 +1,5 @@
-﻿using BepInEx.Logging;
-using CustomizedStorage.Bepinex;
-using CustomizedStorage.Config;
+﻿using CustomizedStorage.Config;
+using SubnauticaUtils;
 using System.Reflection;
 using UnityEngine;
 
@@ -10,7 +9,6 @@ namespace CustomizedStorage.Utility
 	{
 		private static ModConfig Config => ModConfig.Instance;
 		private static bool LogChanges => Config.LogChanges;
-		private static ManualLogSource Logger => Config.Logger;
 
 		#region Object Verifiers
 
@@ -36,7 +34,7 @@ namespace CustomizedStorage.Utility
 			var height = Config.ExosuitHeight;
 
 			if (LogChanges)
-				Logger.LogInfo($"{PluginInfo.PLUGIN_NAME} updating the size of {exosuit.name} to be {width}x{height}.");
+				QuickLogger.Info($"Updating the size of {exosuit.name} to be {width}x{height}.");
 
 			var storageModuleCount = exosuit.modules.GetCount(TechType.VehicleStorageModule);
 			var extraRows = storageModuleCount * Config.ExosuitRowsPerModule;
@@ -60,7 +58,7 @@ namespace CustomizedStorage.Utility
 			}
 
 			if (LogChanges)
-				Logger.LogInfo($"{PluginInfo.PLUGIN_NAME} Filtration Udpated. Values: Height: {height}, Width: {width}, Max Salt {maxSalt}, Max Water {maxWater}.");
+				QuickLogger.Info($"Filtration Udpated. Values: Height: {height}, Width: {width}, Max Salt {maxSalt}, Max Water {maxWater}.");
 
 			machine.maxSalt = maxSalt;
 			machine.maxWater = maxWater;
@@ -79,7 +77,7 @@ namespace CustomizedStorage.Utility
 			else if (container.IsWaterproofLocker()) { width = Config.WaterproofLockerWidth; height = Config.WaterproofLockerHeight; }
 
 			if (LogChanges)
-				Logger.LogInfo($"{PluginInfo.PLUGIN_NAME} updating the size of {container.name} to be {width}x{height}.");
+				QuickLogger.Info($"Updating the size of {container.name} to be {width}x{height}.");
 
 			if(width > 0 && height > 0)
 				container.Resize(width, height);
@@ -88,7 +86,7 @@ namespace CustomizedStorage.Utility
 		internal static void UpdateStorageSizeWithFieldInfo<T>(this T itemWithContainer, int width, int height) where T : Object
 		{
 			if (LogChanges)
-				Logger.LogInfo($"{PluginInfo.PLUGIN_NAME} updating the size of {itemWithContainer.name} to be {width}x{height}.");
+				QuickLogger.Info($"Updating the size of {itemWithContainer.name} to be {width}x{height}.");
 
 			var fieldInfo = typeof(T).GetField("_container", BindingFlags.Instance | BindingFlags.NonPublic);
 

@@ -2,6 +2,7 @@
 using CustomizedStorage.Config;
 using HarmonyLib;
 using SMLHelper.V2.Handlers;
+using SubnauticaUtils;
 using System;
 
 namespace CustomizedStorage.Bepinex
@@ -13,19 +14,18 @@ namespace CustomizedStorage.Bepinex
 		{
 			try
 			{
-				Logger.LogInfo($"{PluginInfo.PLUGIN_NAME} registing menu options with SML Helper...");
-
+				QuickLogger.Info("Registing menu options with SML Helper...");
 				ModConfig.Instance = OptionsPanelHandler.Main.RegisterModOptions<ModConfig>();
-				
-				Logger.LogInfo($"{PluginInfo.PLUGIN_NAME} patching...");
+
+				QuickLogger.Info("Patching...");
 				var harmony = new Harmony(PluginInfo.PLUGIN_GUID);
 				harmony.PatchAll();
 
-				Logger.LogInfo($"{PluginInfo.PLUGIN_NAME} loaded!");
+				QuickLogger.Info("Loaded!");
 			}
 			catch (Exception e)
 			{
-				Logger.LogError(e);
+				QuickLogger.Error(e);
 			}
 		}
 	}

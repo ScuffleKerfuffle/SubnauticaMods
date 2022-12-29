@@ -1,12 +1,11 @@
-﻿using BepInEx.Logging;
-using CustomizedStorage.Bepinex;
-using CustomizedStorage.Utility;
+﻿using CustomizedStorage.Utility;
 using Newtonsoft.Json;
 using SMLHelper.V2.Json;
 using SMLHelper.V2.Options;
 using SMLHelper.V2.Options.Attributes;
 using UnityEngine;
 using System.Linq;
+using SubnauticaUtils;
 
 namespace CustomizedStorage.Config
 {
@@ -17,9 +16,7 @@ namespace CustomizedStorage.Config
 
 		[JsonIgnore]
 		internal static ModConfig Instance { get; set; } = new ModConfig();
-		[JsonIgnore]
-		internal ManualLogSource Logger { get; set; } = new ManualLogSource(PluginInfo.PLUGIN_NAME);
-
+		
 		#endregion
 
 		#region Mod Helper Slider Props
@@ -125,7 +122,7 @@ namespace CustomizedStorage.Config
 			var exosuits = Object.FindObjectsOfType<Exosuit>().ToList();
 
 			if(LogChanges)
-				Logger.LogInfo($"{PluginInfo.PLUGIN_NAME} found {exosuits?.Count}.");
+				QuickLogger.Info($"Found {exosuits?.Count}.");
 
 			exosuits.ForEach(e => e.UpdateExosuitStorageSize());
 		}
