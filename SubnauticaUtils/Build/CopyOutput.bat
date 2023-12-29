@@ -1,0 +1,8 @@
+if not exist "D:\Program Files (x86)\Steam\steamapps\common\Subnautica\BepInEx\plugins\CustomizedStorage" mkdir "D:\Program Files (x86)\Steam\steamapps\common\Subnautica\BepInEx\plugins\CustomizedStorage"
+if not exist "D:\Program Files (x86)\Steam\steamapps\common\Subnautica\BepInEx\plugins\MagicBattery\Assets" mkdir "D:\Program Files (x86)\Steam\steamapps\common\Subnautica\BepInEx\plugins\MagicBattery\Assets"
+copy ..\CustomizedStorage\bin\Release\net472\CustomizedStorage.dll "D:\Program Files (x86)\Steam\steamapps\common\Subnautica\BepInEx\plugins\CustomizedStorage\CustomizedStorage.dll" /y
+copy ..\MagicBattery\bin\Release\net472\MagicBattery.dll "D:\Program Files (x86)\Steam\steamapps\common\Subnautica\BepInEx\plugins\MagicBattery\MagicBattery.dll" /y
+copy ..\MagicBattery\bin\Release\net472\Textures\MagicBattery.png "D:\Program Files (x86)\Steam\steamapps\common\Subnautica\BepInEx\plugins\MagicBattery\Assets\magicBattery.png" /y
+copy ..\MagicBattery\bin\Release\net472\Textures\MagicPowerCell.png "D:\Program Files (x86)\Steam\steamapps\common\Subnautica\BepInEx\plugins\MagicBattery\Assets\MagicPowerCell.png" /y
+copy "..\MagicBattery\bin\Release\net472\Textures\BATTERYTEXTUREBASE (high quality).png" "D:\Program Files (x86)\Steam\steamapps\common\Subnautica\BepInEx\plugins\MagicBattery\Assets\BATTERYTEXTUREBASE (high quality).png" /y
+copy "..\MagicBattery\bin\Release\net472\Textures\POWERCELLBASE (high quality).png" "D:\Program Files (x86)\Steam\steamapps\common\Subnautica\BepInEx\plugins\MagicBattery\Assets\POWERCELLBASE (high quality).png" /y

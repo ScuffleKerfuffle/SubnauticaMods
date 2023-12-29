@@ -32,10 +32,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Build\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
@@ -46,7 +42,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="call .\Build\CopyOutput.bat" />
+    <Exec Command="call ..\SubnauticaUtils\Build\CopyOutput.bat" />
   </Target>
 
   <Import Project="..\SubnauticaUtils\SubnauticaUtils.projitems" Label="Shared" />
